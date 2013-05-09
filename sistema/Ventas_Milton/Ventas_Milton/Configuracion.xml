@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuracion>
+  <conexion>
+    <servidor>74.52.154.114</servidor>
+    <basedatos>pydcom_bd_ventas</basedatos>
+    <usuario>pydcom_michael</usuario>
+    <password>123456</password>
+  </conexion>
+</configuracion>
