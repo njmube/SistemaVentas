@@ -1,0 +1,19 @@
+Tablas a usar:
+*********************
+-Mercadería
+	StockD	
+
+-Movimiento
+	Tipo movimiento
+	fecha
+	hora
+	Ubicacion inicial
+	Ubicacion final
+	
+-Existencias
+	Estado mercaderia
+	idUbicacion
+	Eliminado
+
+	
+	
