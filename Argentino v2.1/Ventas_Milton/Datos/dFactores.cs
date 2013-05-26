@@ -376,7 +376,7 @@ namespace Ventas_Milton.Datos
         }
 
 
-        internal string buscarIGV()
+        public string buscarIGV()
         {
             //double e = f.QueryReturnDouble("SELECT monto FROM factores WHERE idFactores = 9");
             return e.ToString();
