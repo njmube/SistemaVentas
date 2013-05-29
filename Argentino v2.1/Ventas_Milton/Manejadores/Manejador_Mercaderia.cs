@@ -186,5 +186,10 @@ namespace Ventas_Milton.Manejadores
             dt = dmercaderia.Mercaderia_ListarxIdCategoriaxNombre(idCategoria,nombre);
             return dt;
         }
+
+        public DataTable buscarMercaderiaCompra(string p)
+        {
+            return dmercaderia.buscarMercaderiaCompra(p);
+        }
     }
 }

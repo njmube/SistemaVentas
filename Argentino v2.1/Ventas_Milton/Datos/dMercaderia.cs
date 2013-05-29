@@ -710,5 +710,11 @@ namespace Ventas_Milton.Datos
             string q = "update mercaderia set stockDisponible = "+cantidad+" where idMercaderia = "+id+" ";
             funciones.Query(q);
         }
+
+        public DataTable buscarMercaderiaCompra(string p)
+        {
+            string q = "Select 	m.idMercaderia 'Codigo', m.nombre 'Producto', m.precioVenta 'Precio', m.stockDisponible 'Stock', f.`descripcion` 'UM' from mercaderia m inner join unidadmedida f on m.`idUndMedida` = f.`idUnidadMedida` where m.nombre LIKE concat('%', '" + p + "','%') and m.`eliminado` = 0";
+            return funciones.QueryReturnDataTable(q);
+        }
     }
 }

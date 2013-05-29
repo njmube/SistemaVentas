@@ -625,6 +625,11 @@ namespace Ventas_Milton.Vista
             }
         }
 
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
         
 
     }

@@ -86,6 +86,14 @@
             this.idExistencia_existencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo_mercaderia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvProdcutos = new System.Windows.Forms.DataGridView();
+            this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mercaderia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stockDisponible = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlBotones = new System.Windows.Forms.Panel();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -96,14 +104,6 @@
             this.btnMaximizar = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mercaderia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stockDisponible = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStrip1.SuspendLayout();
             this.pnlProducto.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -769,6 +769,57 @@
             this.dgvProdcutos.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvProdcutos_RowsRemoved);
             this.dgvProdcutos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dgvProdcutos_KeyPress);
             // 
+            // idProducto
+            // 
+            this.idProducto.HeaderText = "idProducto";
+            this.idProducto.Name = "idProducto";
+            this.idProducto.ReadOnly = true;
+            this.idProducto.Visible = false;
+            // 
+            // Mercaderia
+            // 
+            this.Mercaderia.HeaderText = "Mercaderia";
+            this.Mercaderia.Name = "Mercaderia";
+            this.Mercaderia.ReadOnly = true;
+            // 
+            // PrecioUnitario
+            // 
+            this.PrecioUnitario.HeaderText = "Precio";
+            this.PrecioUnitario.Name = "PrecioUnitario";
+            this.PrecioUnitario.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // SubTotal
+            // 
+            this.SubTotal.HeaderText = "SubTotal";
+            this.SubTotal.Name = "SubTotal";
+            this.SubTotal.ReadOnly = true;
+            // 
+            // Descuento
+            // 
+            this.Descuento.HeaderText = "Descuento";
+            this.Descuento.Name = "Descuento";
+            this.Descuento.ReadOnly = true;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            // 
+            // stockDisponible
+            // 
+            this.stockDisponible.DataPropertyName = "stock";
+            this.stockDisponible.HeaderText = "stock";
+            this.stockDisponible.Name = "stockDisponible";
+            this.stockDisponible.ReadOnly = true;
+            this.stockDisponible.Visible = false;
+            // 
             // pnlBotones
             // 
             this.pnlBotones.BackColor = System.Drawing.Color.White;
@@ -846,6 +897,7 @@
             this.lblTitulo.TabIndex = 9;
             this.lblTitulo.Text = ".:FrmVentas:.";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             this.lblTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblTitulo_MouseDown);
             this.lblTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lblTitulo_MouseMove);
             this.lblTitulo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lblTitulo_MouseUp);
@@ -900,57 +952,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
-            // 
-            // idProducto
-            // 
-            this.idProducto.HeaderText = "idProducto";
-            this.idProducto.Name = "idProducto";
-            this.idProducto.ReadOnly = true;
-            this.idProducto.Visible = false;
-            // 
-            // Mercaderia
-            // 
-            this.Mercaderia.HeaderText = "Mercaderia";
-            this.Mercaderia.Name = "Mercaderia";
-            this.Mercaderia.ReadOnly = true;
-            // 
-            // PrecioUnitario
-            // 
-            this.PrecioUnitario.HeaderText = "Precio";
-            this.PrecioUnitario.Name = "PrecioUnitario";
-            this.PrecioUnitario.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
-            // SubTotal
-            // 
-            this.SubTotal.HeaderText = "SubTotal";
-            this.SubTotal.Name = "SubTotal";
-            this.SubTotal.ReadOnly = true;
-            // 
-            // Descuento
-            // 
-            this.Descuento.HeaderText = "Descuento";
-            this.Descuento.Name = "Descuento";
-            this.Descuento.ReadOnly = true;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            // 
-            // stockDisponible
-            // 
-            this.stockDisponible.DataPropertyName = "stock";
-            this.stockDisponible.HeaderText = "stock";
-            this.stockDisponible.Name = "stockDisponible";
-            this.stockDisponible.ReadOnly = true;
-            this.stockDisponible.Visible = false;
             // 
             // frmVentas
             // 
