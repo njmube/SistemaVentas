@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E042F737-8DEF-4013-A02C-7E5D83202AB9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ventas_Milton</RootNamespace>
+    <AssemblyName>Ventas_Milton</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\MySql.Data\v4.0_6.4.4.0__c5687fc88969c44d\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UdPicker">
+      <HintPath>..\UdPicker.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Datos\csConexion.cs" />
+    <Compile Include="Datos\dCategoria.cs" />
+    <Compile Include="Datos\dCategorias.cs" />
+    <Compile Include="Datos\dDetMovimiento.cs" />
+    <Compile Include="Datos\dExistencias.cs" />
+    <Compile Include="Datos\dFactores.cs" />
+    <Compile Include="Datos\dMercaderia.cs" />
+    <Compile Include="Datos\dMovimiento.cs" />
+    <Compile Include="Datos\dOfertas.cs" />
+    <Compile Include="Datos\dPersona.cs" />
+    <Compile Include="Datos\dRegistroDeProcesos.cs" />
+    <Compile Include="Datos\dUnidadMedida.cs" />
+    <Compile Include="Datos\dUsuarioAccion.cs" />
+    <Compile Include="Datos\dUsuarios.cs" />
+    <Compile Include="Entidades\csCategorias.cs" />
+    <Compile Include="Entidades\csDetMovimiento.cs" />
+    <Compile Include="Entidades\csExistencias.cs" />
+    <Compile Include="Entidades\csFactores.cs" />
+    <Compile Include="Entidades\csMercaderia.cs" />
+    <Compile Include="Entidades\csMovimiento.cs" />
+    <Compile Include="Entidades\csOfertas.cs" />
+    <Compile Include="Entidades\csPersona.cs" />
+    <Compile Include="Entidades\csRegistroDeProcesos.cs" />
+    <Compile Include="Entidades\csUnidadMedida.cs" />
+    <Compile Include="Entidades\csUsuario.cs" />
+    <Compile Include="Entidades\csUsuarioAccion.cs" />
+    <Compile Include="funciones.cs" />
+    <Compile Include="GuiTests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuiTests.Designer.cs">
+      <DependentUpon>GuiTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manejadores\Manejador_AccionUsuario.cs" />
+    <Compile Include="Manejadores\Manejador_Categoria.cs" />
+    <Compile Include="Manejadores\Manejador_Categorias.cs" />
+    <Compile Include="Manejadores\Manejador_ControlProceso.cs" />
+    <Compile Include="Manejadores\Manejador_DetMovimiento.cs" />
+    <Compile Include="Manejadores\Manejador_Existencias.cs" />
+    <Compile Include="Manejadores\Manejador_Factores.cs" />
+    <Compile Include="Manejadores\Manejador_Mercaderia.cs" />
+    <Compile Include="Manejadores\Manejador_Movimientos.cs" />
+    <Compile Include="Manejadores\Manejador_Ofertas.cs" />
+    <Compile Include="Manejadores\Manejador_Persona.cs" />
+    <Compile Include="Manejadores\Manejador_UnidadMedida.cs" />
+    <Compile Include="Manejadores\Manejador_Usuarios.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\frmAcceso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmAcceso.Designer.cs">
+      <DependentUpon>frmAcceso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmCompras.Designer.cs">
+      <DependentUpon>frmCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmControlProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmControlProduccion.designer.cs">
+      <DependentUpon>frmControlProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmExistencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmExistencias.Designer.cs">
+      <DependentUpon>frmExistencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmFactores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmFactores.Designer.cs">
+      <DependentUpon>frmFactores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmMercaderia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmMercaderia.designer.cs">
+      <DependentUpon>frmMercaderia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmMessageBox.designer.cs">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmPersonas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmPersonas.Designer.cs">
+      <DependentUpon>frmPersonas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmProducción.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmProducción.Designer.cs">
+      <DependentUpon>frmProducción.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmTareas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmTareas.designer.cs">
+      <DependentUpon>frmTareas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmTraspasos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmTraspasos.Designer.cs">
+      <DependentUpon>frmTraspasos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmVentas.Designer.cs">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmWarningBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmWarningBox.designer.cs">
+      <DependentUpon>frmWarningBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\OrdenDeProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\OrdenDeProduccion.designer.cs">
+      <DependentUpon>OrdenDeProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Procesos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Procesos.designer.cs">
+      <DependentUpon>Procesos.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GuiTests.resx">
+      <DependentUpon>GuiTests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Vista\frmAcceso.resx">
+      <DependentUpon>frmAcceso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmCompras.resx">
+      <DependentUpon>frmCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmControlProduccion.resx">
+      <DependentUpon>frmControlProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmExistencias.resx">
+      <DependentUpon>frmExistencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmFactores.resx">
+      <DependentUpon>frmFactores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmMercaderia.resx">
+      <DependentUpon>frmMercaderia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmMessageBox.resx">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmPersonas.resx">
+      <DependentUpon>frmPersonas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmProducción.resx">
+      <DependentUpon>frmProducción.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmTareas.resx">
+      <DependentUpon>frmTareas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmTraspasos.resx">
+      <DependentUpon>frmTraspasos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmVentas.resx">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmWarningBox.resx">
+      <DependentUpon>frmWarningBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\OrdenDeProduccion.resx">
+      <DependentUpon>OrdenDeProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Procesos.resx">
+      <DependentUpon>Procesos.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Vista\Reportes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mensaje.png" />
+    <None Include="Resources\Aviso.png" />
+    <None Include="Resources\FinSesion.png" />
+    <None Include="Resources\Moneda2.png" />
+    <None Include="Resources\Moneda1.png" />
+    <None Include="Resources\Moneda.png" />
+    <None Include="Resources\Salir.png" />
+    <None Include="Resources\Reportes_2.png" />
+    <None Include="Resources\Home_2.png" />
+    <None Include="Resources\Reportes.png" />
+    <None Include="Resources\Home.png" />
+    <None Include="Resources\Inicio_2.png" />
+    <None Include="Archivos\advertencia00.png" />
+    <None Include="Archivos\barras00.png" />
+    <None Include="Archivos\buscar00.png" />
+    <None Include="Archivos\buscar01.png" />
+    <None Include="Archivos\calendario00.png" />
+    <None Include="Archivos\cancelar00.png" />
+    <None Include="Archivos\candado00.png" />
+    <None Include="Archivos\Cerrar.png" />
+    <None Include="Archivos\check00.png" />
+    <None Include="Archivos\check01.png" />
+    <None Include="Archivos\configuracion00.png" />
+    <None Include="Archivos\contactos00.png" />
+    <None Include="Archivos\database00.png" />
+    <None Include="Archivos\eliminar00.png" />
+    <None Include="Archivos\eliminar01.png" />
+    <None Include="Archivos\guardar00.png" />
+    <None Include="Archivos\imprimir00.png" />
+    <None Include="Archivos\Maximizar.png" />
+    <None Include="Archivos\Minimizar.png" />
+    <None Include="Archivos\mochila00.png" />
+    <None Include="Archivos\modificar00.png" />
+    <None Include="Archivos\modificar01.png" />
+    <None Include="Archivos\nuevo00.png" />
+    <None Include="Archivos\nuevo01.png" />
+    <None Include="Archivos\nuevo02.png" />
+    <None Include="Archivos\persona00.png" />
+    <None Include="Archivos\persona01.png" />
+    <None Include="Archivos\persona02.png" />
+    <None Include="Archivos\reportes00.png" />
+    <None Include="Archivos\venta00.png" />
+    <None Include="Archivos\_HoverCerrar.png" />
+    <None Include="Archivos\_HoverMaximizar.png" />
+    <None Include="Archivos\_HoverMinimizar.png" />
+    <None Include="Archivos\_hoverRestaurar.png" />
+    <None Include="Archivos\Restaurar.png" />
+    <None Include="Archivos\Traspasos.png" />
+    <None Include="Archivos\Inicio.png" />
+    <None Include="Archivos\Almacen.png" />
+    <None Include="Archivos\Mercaderia.png" />
+    <None Include="Archivos\Configuracion.png" />
+    <None Include="Archivos\Home.png" />
+    <None Include="Archivos\Ventas.png" />
+    <None Include="Archivos\Empleados.png" />
+    <None Include="Archivos\Clientes.png" />
+    <None Include="Archivos\Colocar.png" />
+    <None Include="Archivos\Produccion.png" />
+    <None Include="Archivos\Parametro.png" />
+    <None Include="Archivos\Backups.png" />
+    <None Include="Archivos\Estadisticas.png" />
+    <Content Include="Configuracion.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
